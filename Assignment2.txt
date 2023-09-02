@@ -1,0 +1,186 @@
+asus@suyog-varpe:~/Documents/DevOps$ git init
+Reinitialized existing Git repository in /home/asus/Documents/DevOps/.git/
+asus@suyog-varpe:~/Documents/DevOps$ git config --global user.email "suyogvarpe939@gmail.com"
+asus@suyog-varpe:~/Documents/DevOps$ git config --global user.name "suyog-2703"
+asus@suyog-varpe:~/Documents/DevOps$ git config --list
+user.name=suyog-2703
+user.email=suyogvarpe939@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+asus@suyog-varpe:~/Documents/DevOps$ git clone "https://github.com/suyog-2703/DevOps.git"
+Cloning into 'DevOps'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 604 bytes | 604.00 KiB/s, done.
+asus@suyog-varpe:~/Documents/DevOps$ cd DevOps
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit test.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git add test.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test.txt
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit welcome.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git add welcome.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test.txt
+	new file:   welcome.txt
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit test.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git add test.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test.txt
+	new file:   welcome.txt
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test.txt
+	new file:   welcome.txt
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit test.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test.txt
+	new file:   welcome.txt
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit welcome.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test.txt
+	new file:   welcome.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   welcome.txt
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit test.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test.txt
+	new file:   welcome.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   test.txt
+	modified:   welcome.txt
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git commit -m "first commit"
+[main ca07022] first commit
+ 2 files changed, 5 insertions(+)
+ create mode 100644 test.txt
+ create mode 100644 welcome.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   test.txt
+	modified:   welcome.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git push origin main
+Username for 'https://github.com': suyog-2703
+Password for 'https://suyog-2703@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 362 bytes | 362.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/suyog-2703/DevOps.git
+   c93655b..ca07022  main -> main
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit test.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   test.txt
+	modified:   welcome.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git commit -m "second  commit in text.txt file "
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   test.txt
+	modified:   welcome.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git push origin main
+Username for 'https://github.com': suyog-2703
+Password for 'https://suyog-2703@github.com': 
+Everything up-to-date
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit test.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git add test.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   test.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   welcome.txt
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git commit -m "second  commit in text.txt file "
+[main de5e688] second  commit in text.txt file
+ 1 file changed, 7 insertions(+)
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git push origin main
+Username for 'https://github.com': suyog-2703
+Password for 'https://suyog-2703@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 380 bytes | 380.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/suyog-2703/DevOps.git
+   ca07022..de5e688  main -> main
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ 
+
