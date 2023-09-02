@@ -1,1 +1,118 @@
 error during push operation
+
+
+
+
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit error.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git add error.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   error.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   welcome.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	main
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git commit -m "error "
+[main 90b586d] error
+ 1 file changed, 1 insertion(+)
+ create mode 100644 error.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git push origin main
+Username for 'https://github.com': suyog-2703
+Password for 'https://suyog-2703@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/suyog-2703/DevOps.git/'
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ ls ~/.ssh/id_rsa
+/home/asus/.ssh/id_rsa
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ ssh-keygen -t rsa -b 4096 -C "suyogvarpe939@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/asus/.ssh/id_rsa): 
+/home/asus/.ssh/id_rsa already exists.
+Overwrite (y/n)? 
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ ssh-keygen -t rsa -b 4096 -C "suyogvarpe939@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/asus/.ssh/id_rsa): 
+/home/asus/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/asus/.ssh/id_rsa
+Your public key has been saved in /home/asus/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:ehIdflQLqP2SYZ9MsUxeIthmLMs8AqOLxVYI9eAnf6s suyogvarpe939@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|.oo.   + .. .    |
+| .+o. o B +o..   |
+| oo+oo B.=.=.    |
+|. ++. *o+o=      |
+|.+  ..ooSB..     |
+|o    . +o.=      |
+|      + ..       |
+|     . o         |
+|    E            |
++----[SHA256]-----+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ 
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ ls ~/.ssh/id_rsa
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git remote add origin git@github.com:suyog-2703/DevOps.git
+fatal: remote origin already exists.
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git remote -v
+origin	https://github.com/suyog-2703/DevOps.git (fetch)
+origin	https://github.com/suyog-2703/DevOps.git (push)
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ cat ~/.ssh/id_rsa.pub
+
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC2I4L+t4cUPXRnae3lmZ48TSfAcbWyzt7tE3aDPIX7TupXAv2/j9zVYmL5aDjrPdbYU+0MZ1Iub1s4B+rKYq/ZlM/OVvnJEwpowOIDBLIs1rVQu7qkRLrwo64yg0glQu6iLCN6cEJvN1q4e9bbCiGGtEWuRKMWsEQa2BiMoU0laXcIU4SnfCF3Za6Ooxjvx8UURjU34vbzPlQ/VDowo9vFi1VQZ2uGfBKwWGFTRrQiDj49yP4gySSszQ5iTG+SjUIyM6sCWlO9/bRCgvW9/R8MmwKKBlwxUpSQJUQln47WRxzFkefk3Y4k14KP1jfGO9K9N255xoVHYsbWlVd/tlEmdrVOW/c3BH7L0VU8b+n6NA5ZNUfuM5M8ZyB8Qb709+zqdQvjojub7PbTWK/Q+uZlWkfr9v7fIZ7orzZyRK1EvFeLS3TCAZjKrwsQzTWgaGZomMVogQ2f7lBv9Xu8CWe5t9mRddb6DVKx92gIkrtu19BQ9A9GQHM+I7RQImI+Tsy+mEOsQ+hAr5pNz4z1ytaD61BT3urnceDtb9JakCe9y/mFVS6Uh9kLZ47khRYBHcNmzOW6JJSDJ7uW4jkPHWNw4gaX90PALY5mmZuUDyvuRddP64Wmu7x1uS2hHfnrpTuIk4E24Wpu9nd8PF3NKFb5VtZ8czbabdGiIdaSgx8e7w== suyogvarpe939@gmail.com
+
+
+
+
+Add this key in SSH
+
+Refer Google Document for this
+
+
+
+
+
+
+
+
+
+
+
+asus@suyog-varpe:~/Documents/DevOps/DevOps$  eval "$(ssh-agent -s)"
+Agent pid 4460
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ ssh -T git@github.com
+Hi suyog-2703! You've successfully authenticated, but GitHub does not provide shell access.
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ git push origin main
+Username for 'https://github.com': suyog-2703
+
+
+"Dont't put the password generate the token of the password steps is in Google Document"
+
+Password for 'https://suyog-2703@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 294.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/suyog-2703/DevOps.git
+   70575fb..90b586d  main -> main
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit key.txt
+asus@suyog-varpe:~/Documents/DevOps/DevOps$ gedit error.txt
+
+
